@@ -7,12 +7,8 @@ import {
   FiArrowLeft,
   FiLock,
 } from "react-icons/fi";
-import { getProjectById, getAllProjects } from "@/lib/projects";
+import { getProjectById } from "@/lib/projects";
 
-export async function generateStaticParams() {
-  const projects = await getAllProjects();
-  return projects.map((p) => ({ id: p.id }));
-}
 
 export default async function ProjectDetailPage({
   params,
